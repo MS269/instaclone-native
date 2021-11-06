@@ -1,10 +1,10 @@
 import { Ionicons } from "@expo/vector-icons";
+import { NavigationContainer } from "@react-navigation/native";
 import AppLoading from "expo-app-loading";
 import { Asset } from "expo-asset";
-import Font from "expo-font";
-import { StatusBar } from "expo-status-bar";
+import * as Font from "expo-font";
 import React, { useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import LoggedOutNav from "./navigators/LoggedOutNav";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -23,18 +23,8 @@ export default function App() {
     );
   }
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <LoggedOutNav />
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
