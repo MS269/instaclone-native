@@ -10,7 +10,7 @@
   "dependencies": {
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/native-stack": "^6.2.5",
-    "expo": "~42.0.1",
+    "expo": "^42.0.5",
     "expo-app-loading": "1.1.2",
     "expo-asset": "~8.3.3",
     "expo-font": "~9.2.1",
@@ -23,9 +23,9 @@
     "react-native-web": "~0.13.12"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
+    "@babel/core": "^7.16.0",
     "@types/react": "~16.9.35",
-    "@types/react-native": "~0.63.2",
+    "@types/react-native": "^0.63.56",
     "typescript": "~4.0.0"
   },
   "private": true
