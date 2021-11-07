@@ -8,6 +8,7 @@ import LoggedOutNav from "./navigators/LoggedOutNav";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
+
   const preload = async () => {
     const fontsToLoad = [Ionicons.font];
     const fontPromises = fontsToLoad.map((font) => Font.loadAsync(font));
@@ -22,6 +23,7 @@ export default function App() {
       <AppLoading startAsync={preload} onError={onError} onFinish={onFinish} />
     );
   }
+
   return (
     <NavigationContainer>
       <LoggedOutNav />
