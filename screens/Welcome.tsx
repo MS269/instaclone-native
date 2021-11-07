@@ -18,10 +18,12 @@ const Logo = styled.Image`
   height: 100px;
 `;
 
-const CreateAccount = styled.TouchableOpacity`
+const CreateAccount = styled.TouchableOpacity<{ disabled: boolean }>`
   background-color: ${colors.blue};
+  opacity: ${(props) => (props.disabled ? "0.5" : "1")};
   width: 100%;
   padding: 10px;
+  margin: 20px 0px 0px 0px;
   border-radius: 3px;
 `;
 
@@ -46,11 +48,11 @@ export default function Welcome({
   return (
     <Container>
       <Logo source={require("../assets/logo.png")} resizeMode="contain" />
-      <CreateAccount onPress={goToCreateAccount}>
+      <CreateAccount onPress={goToCreateAccount} disabled={false}>
         <CreateAccountText>Create New Account</CreateAccountText>
       </CreateAccount>
       <TouchableOpacity onPress={goToLogIn}>
-        <LoginLink>Log in</LoginLink>
+        <LoginLink>Log In</LoginLink>
       </TouchableOpacity>
     </Container>
   );
